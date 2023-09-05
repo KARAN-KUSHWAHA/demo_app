@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="15917" started-at="2023-09-05T10:35:33Z" finished-at="2023-09-05T10:35:49Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="15917" started-at="2023-09-05T10:35:33Z" finished-at="2023-09-05T10:35:49Z">
+      <class name="com.herokuapp.theinternet.SeleniumLoginTests">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.herokuapp.theinternet.SeleniumLoginTests@13a57a3b]" name="loginTest" duration-ms="15901" started-at="2023-09-05T10:35:33Z" finished-at="2023-09-05T10:35:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- com.herokuapp.theinternet.SeleniumLoginTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
