@@ -23,7 +23,7 @@ public class SeleniumLoginTests {
 		} catch (IllegalStateException e) {
 			// When the driver is not available and exception is thrown then try with local
 			// path.
-			System.setProperty("webdriver.chrome.driver", "/home/jenkins/chrome_driver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "/opt/chromedriver-linux64/chromedriver");
 			driver = new ChromeDriver(options);
 		}
 
