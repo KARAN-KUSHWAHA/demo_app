@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,12 +16,15 @@ public class SeleniumLoginTests {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		System.out.println("Test Started!");
 		WebDriver driver = null;
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
 		try {
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} catch (IllegalStateException e) {
-			// When the driver is not available and exception is thrown then try with local path.
-			System.setProperty("webdriver.chrome.driver", "/home/jenkins/chrome_driver/chromedriver");		
-			driver = new ChromeDriver();
+			// When the driver is not available and exception is thrown then try with local
+			// path.
+			System.setProperty("webdriver.chrome.driver", "/home/jenkins/chrome_driver/chromedriver");
+			driver = new ChromeDriver(options);
 		}
 
 		System.out.println("Browser started.");
