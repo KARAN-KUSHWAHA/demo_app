@@ -11,14 +11,21 @@ public class SeleniumLoginTests {
 
 	@Test
 	public void loginTest() {
-//		Create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+//		Create driver using path on the server.
+		System.setProperty("webdriver.chrome.driver", "/opt/chrome_driver/chromedriver.exe");		
 		System.out.println("Test Started!");
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = null;
+		try {
+			driver = new ChromeDriver();
+		} catch (IllegalStateException e) {
+			// When the driver is not available and exception is thrown then try with local path.
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+
 		System.out.println("Browser started.");
 		sleep(2); // Sleep in seconds.
 //		open test page
-//		String url = "http://the-internet.herokuapp.com/login";
 		String url = "http://localhost:8080/demo_app";
 		driver.get(url);
 		sleep(2); // Sleep in seconds.
@@ -41,13 +48,13 @@ public class SeleniumLoginTests {
 		WebElement login = driver.findElement(By.id("submit-button"));
 		login.click();
 //		verification
-		
+
 		String expectedUrl = "http://localhost:8080/demo_app/success.jsp";
 		String actualUrl = driver.getCurrentUrl();
 
 		Assert.assertEquals(actualUrl, expectedUrl, "Actural page url is not same as the expected url.");
 
-		sleep(5); // Sleep in seconds.
+		sleep(4); // Sleep in seconds.
 //		 logout button is visible
 
 //		WebElement logout = driver.findElement(By.xpath("//body/div[2]/div[1]/div[1]/a[1]"));
