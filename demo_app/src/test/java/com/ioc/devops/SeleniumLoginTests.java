@@ -38,6 +38,8 @@ public class SeleniumLoginTests {
 		sleep(2); // Sleep in seconds.
 		System.out.println("Page is Open");
 
+		
+		sleep(2); // Sleep in seconds.
 //		enter username
 		WebElement username = driver.findElement(By.id("uname"));
 		username.sendKeys("test");
