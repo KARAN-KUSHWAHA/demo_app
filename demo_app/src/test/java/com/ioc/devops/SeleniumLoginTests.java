@@ -12,7 +12,7 @@ public class SeleniumLoginTests {
 	@Test
 	public void loginTest() {
 //		Create driver using path on the server.
-		System.setProperty("webdriver.chrome.driver", "/opt/chrome_driver/chromedriver.exe");		
+		System.setProperty("webdriver.chrome.driver", "//opt//chrome_driver//chromedriver.exe");		
 		System.out.println("Test Started!");
 		WebDriver driver = null;
 		try {
