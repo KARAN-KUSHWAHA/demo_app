@@ -19,7 +19,7 @@ public class SeleniumLoginTests {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		try {
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 		} catch (IllegalStateException e) {
 			// When the driver is not available and exception is thrown then try with local
 			// path.
@@ -48,7 +48,7 @@ public class SeleniumLoginTests {
 //		enter password
 		WebElement password = driver.findElement(By.id("psw"));
 		password.sendKeys("test");
-//		sleep(2); // Sleep in seconds.
+		sleep(2); // Sleep in seconds.
 
 //		click login button
 		WebElement login = driver.findElement(By.id("submit-button"));
