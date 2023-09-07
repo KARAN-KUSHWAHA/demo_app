@@ -79,9 +79,11 @@ span.psw {
     <input type="text" id="uname" name="uname" required autocomplete="off">
 
     <label for="psw"><b>Password</b></label>
+    
     <input type="password" id="psw" name="psw" required autocomplete="off">
         <p>username: test</p>
         <p>password: test</p>
+        <%System.out.println("username: test, Passwrod:  test"); %>
     <button id="submit-button" type="submit">Login</button>
   </div>
 
