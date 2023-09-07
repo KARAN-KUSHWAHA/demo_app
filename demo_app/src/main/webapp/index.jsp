@@ -80,7 +80,8 @@ span.psw {
 
     <label for="psw"><b>Password</b></label>
     <input type="password" id="psw" name="psw" required autocomplete="off">
-        
+        <p>username: test</p>
+        <p>password: test</p>
     <button id="submit-button" type="submit">Login</button>
   </div>
 
